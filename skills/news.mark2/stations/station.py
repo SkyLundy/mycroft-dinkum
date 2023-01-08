@@ -134,6 +134,8 @@ class RSSStation(BaseStation):
         # - The original URL redirected and the new URL does not contain a GET variable
         # if self._rss_url.startswith("https://www.npr.org/"):
             # media_url = media_url.split("?")[0]
+        LOG.warning('Fired media_uri')
+        LOG.warning(media_url)
         return media_url
 
     def _get_audio_from_rss(self) -> str:
