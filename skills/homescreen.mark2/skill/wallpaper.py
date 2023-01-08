@@ -33,6 +33,7 @@ WALLPAPER_ALIASES = {
     "nebula.png": ["nebula", "space"],
     "orange.png": ["orange"],
     "tokyo-night.png": ["city", "night", "tonight"],
+    "geometric.png": ["geometric"],
 }
 
 
