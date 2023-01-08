@@ -130,8 +130,10 @@ class RSSStation(BaseStation):
         """Get the uri for the media file to be played."""
         media_url = self._get_audio_from_rss()
         # TODO - check on temporary workaround and remove - see issue #87
-        if self._rss_url.startswith("https://www.npr.org/"):
-            media_url = media_url.split("?")[0]
+        # - Remove this because the NPR news feed URL has been updated.
+        # - The original URL redirected and the new URL does not contain a GET variable
+        # if self._rss_url.startswith("https://www.npr.org/"):
+            # media_url = media_url.split("?")[0]
         return media_url
 
     def _get_audio_from_rss(self) -> str:
@@ -254,7 +256,7 @@ stations = dict(
     NPR=RSSStation(
         "NPR",
         "NPR News Now",
-        "https://www.npr.org/rss/podcast.php?id=500005",
+        "https://feeds.npr.org/500005/podcast.xml",
         "NPR.png",
         "#BE1617",
     ),
