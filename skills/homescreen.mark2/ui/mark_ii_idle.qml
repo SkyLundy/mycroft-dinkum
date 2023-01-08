@@ -107,7 +107,7 @@ Mycroft.Delegate {
             anchors.top: parent.top
             anchors.topMargin: gridUnit * 6
             fontSize: 200
-            fontStyle: "Bold"
+            fontStyle: "Regular"
             heightUnits: 10
             text: sessionData.homeScreenTime.replace(":", "꞉")
             width: parent.width
